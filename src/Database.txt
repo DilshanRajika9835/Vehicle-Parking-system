@@ -1,0 +1,30 @@
+drop database if exists VehicleParking ;
+create database VehicleParking;
+use VehicleParking;
+
+create table Vehicle(
+VehicleID Varchar(10)not null,
+VehicleType varchar(10)not null,
+CustomerName varchar(40)not null,
+Intime  varchar (15)  default 'No',
+Outtime varchar (15)  default '0:0',
+payments decimal(10,2)default 0,
+Date_Time varchar (15)  default '1990/01/01',
+constraint primary key(VehicleID)
+);
+create table VehicleInformatin(
+vehicletype varchar(10)not null,
+Cost decimal(10,2) not null,
+Timer varchar (10)not null,
+No_of_Slots int(10)not null,
+constraint primary key(vehicletype )
+);
+Insert into VehicleInformatin values('Car',50,'Per Hour',40);
+Insert into VehicleInformatin values('van',75,'Per Hour',30);
+Insert into VehicleInformatin values('Bus',100,'Per Hour',20);
+Insert into VehicleInformatin values('Lorry',150,'Per Hour',10);
+
+
+
+
+
